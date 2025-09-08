@@ -88,7 +88,7 @@ class Main(object):
             if "FW_VERSION" in os.environ:
                 current_info["VERSION"] = os.environ["FW_VERSION"]
             else:
-                current_info["VERSION"] = current_info["GIT_BRANCH"] + "_" + current_info["GIT_COMMIT"]
+                current_info["VERSION"] ="2.14.0"
 
         version_values = []
         for key in current_info:
