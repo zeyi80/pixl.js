@@ -38,7 +38,7 @@ class GitVersion:
         if ref_type == "tag":
             version = os.environ.get("GITHUB_REF_NAME", None)
         elif ref_type == "branch":
-            version = "b" + os.environ.get("GITHUB_RUN_NUMBER", None)
+            version = "2.14.0"
         else:
             try:
                 version = self._exec_git("describe --tags --abbrev=0 --exact-match")
