@@ -36,7 +36,7 @@ class GitVersion:
 
         ref_type = os.environ.get("GITHUB_REF_TYPE", None)
         if ref_type == "tag":
-            version = os.environ.get("GITHUB_REF_NAME", None)
+            version = "2.14.0"
         elif ref_type == "branch":
             version = "2.14.0"
         else:
