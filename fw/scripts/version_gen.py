@@ -36,9 +36,9 @@ class GitVersion:
 
         ref_type = os.environ.get("GITHUB_REF_TYPE", None)
         if ref_type == "tag":
-            version = "2.14.0"
+            version = "2.16.0"
         elif ref_type == "branch":
-            version = "2.14.0"
+            version = "2.16.0"
         else:
             try:
                 version = self._exec_git("describe --tags --abbrev=0 --exact-match")
@@ -86,9 +86,9 @@ class Main(object):
 
         if current_info["VERSION"] == 'unknown':
             if "FW_VERSION" in os.environ:
-                current_info["VERSION"] ="2.14.0"
+                current_info["VERSION"] ="2.16.0"
             else:
-                current_info["VERSION"] ="2.14.0"
+                current_info["VERSION"] ="2.16.0"
 
         version_values = []
         for key in current_info:
